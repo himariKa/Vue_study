@@ -1,6 +1,7 @@
+// Vueの定数であることを定義する
 const { createApp } = Vue;
-
-    createApp({
+// App定数を作成する
+    const App = createApp({
         data() {
             return {
                 text: 'hello Vue.js',
@@ -14,5 +15,8 @@ const { createApp } = Vue;
         }
 
     }).mount('#app');
-
-    createApp.text='good bye';
+    
+    //定数Appのtextを変更する処理
+    App.text='good bye';
+    //定数Appのcountをインクリメントする処理
+    App.increment()
