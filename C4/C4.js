@@ -8,7 +8,8 @@ const { createApp } = Vue;
         data() {
             return {
                 text: 'hello Vue.js',
-                count:0
+                count:0,
+                name:'name'
             };
         },
         methods:{
@@ -20,6 +21,17 @@ const { createApp } = Vue;
             },
             changeHoge(){
                 this.text='hogehoge';
+            }
+        },
+        computed:{
+            isPassA(){
+                return this.count >= 10;
+            },
+            isPassB(){
+                return this.count >= 5;
+            },
+            isInValidName(){
+                return this.name.length < 4;
             }
         }
 

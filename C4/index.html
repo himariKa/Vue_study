@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="app">
-        <p>
+        <!-- テキストの表示 -->
+        <!-- <p>
             {{text}}
-        </p>
-        <p>
+        </p> -->
+        <!-- カウントの表示 -->
+        <!-- <p>
             {{count}}
-        </p>
-        <button @click="increment">+1</button>
-        <button @click="decrement">-1</button>
-        <input type="button" name="button" value="push" @click="changeHoge"/>
+        </p> -->
+        <!-- インクリメントとデクリメントのボタン -->
+        <!-- <button class="button" @click="increment">+1</button>
+        <button class="button" @click="decrement">-1</button> -->
+        <!-- テキストをhogehogeにかえるボタン -->
+        <!-- <input type="button" name="button" value="push" @click="changeHoge"/> -->
+        <!-- 条件分岐 -->
+        <!-- <p v-if="isPassA" class="passed">クラスA</p>
+        <p v-else-if="isPassB" class="passed">クラスB</p>
+        <p v-else>不合格</p> -->
+        <p>名前</p>
+        <input type="text" name="name" v-model="name"/>
+        <p v-if="isInValidName" class="error">名前は4文字以上で入力してね</p>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./C4.js"></script>
