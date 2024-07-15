@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="jp">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <!-- テキストの表示 -->
@@ -26,12 +28,26 @@
         <!-- <p v-if="isPassA" class="passed">クラスA</p>
         <p v-else-if="isPassB" class="passed">クラスB</p>
         <p v-else>不合格</p> -->
-        <p>名前</p>
-        <input type="text" name="name" v-model="name"/>
-        <p v-if="isInValidName" class="error">名前は4文字以上で入力してね</p>
+        <div class="form-area__name">
+            <p>名前</p>
+            <input type="text" name="name" v-model="name">
+            <p v-if="isInValidName" class="error">名前を4文字以上で入力してね</p>
+        </div>
+        <div class="form-area__email">
+            <p>メール</p>
+            <input type="text" name="email" v-model="email">
+            <p v-if="isInValidEmail" class="error">Eメールの形式で入力してね</p>
+        </div>
+        <div class="form-area__tel">
+            <p>電話番号</p>
+            <input type="text" name="tel" v-model="tel">
+            <p v-if="isInValidTel" class="error">電話番号は数字8字以上で入力してね</p>
+        </div>
+
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./C4.js"></script>
-    
+
 </body>
+
 </html>
