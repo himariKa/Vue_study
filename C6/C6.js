@@ -1,7 +1,7 @@
 //色を変化させるアプリを作成する
 
 // Vueの定数であることを定義する
-const { createApp,hamburger } = Vue;
+const { createApp } = Vue;
 
 const App = createApp({
     // el:'#app',
@@ -24,7 +24,7 @@ const App = createApp({
     }
 });
 
-const App2 = hamburger({
+const App2 = createApp({
     data(){
         return{
             isActive:false
